@@ -30,5 +30,7 @@ for (let i = 0; i < newLength; i++) {
 console.log(result);
 
 // for문 안에 if문 대신
+// 단축 평가 표현식을 써서 undefined인 경우 false이므로 논리연산자 뒤에 있는 빈문자열을 더하게 됨
+// 문자열 최대 길이를 기준으로 반복문을 돌렸기 때문에 그 보다 짧은 길이의 문자열일 경우 undefined이 출력되는 것!
 // result += arr[j][i] || ""
 // 위의 한 줄만 쓰면 코드를 더 간결하게 풀 수 있다.
