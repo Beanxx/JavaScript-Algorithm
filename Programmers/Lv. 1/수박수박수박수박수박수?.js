@@ -1,3 +1,6 @@
+// 2022.06.13(Mon)
+// 수박수박수박수박수.js
+
 // my way
 function solution(n) {
   let answer = "";
