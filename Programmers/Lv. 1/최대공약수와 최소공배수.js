@@ -25,12 +25,11 @@ function solution(n, m) {
 
 // other way (유클리드 호제법)
 
-// 최대공약수 구하는 함수
+// 최대공약수 구하는 함수 (재귀함수 사용)
+// 나눠 떨어질 때까지 서로를 나눈 나머지를 계속 나눠주는 함수
 function getMin(a, b) {
-  return b ? getMin(b, a % b) : Math.abs(a);
+  return b ? getMin(b, a % b) : a;
 }
-// Math.abs(a): a의 절대값 구하기
-// 근데 왜 절대값 처리를 해주는건지는 이해가 안된다,, 담에 찬찬히 이해해보자..
 
 // 최소공배수 구하는 함수
 function getMax(a, b) {
