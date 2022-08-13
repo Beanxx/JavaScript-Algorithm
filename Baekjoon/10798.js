@@ -1,5 +1,5 @@
+// 10798 세로읽기
 // 2022.06.13(Mon)
-// 10798_세로읽기.js
 
 // Success!! (40m)
 // 처음에 반복문에서 arr.length까지 설정해줘서 'hweo' 까지 출력
@@ -12,7 +12,6 @@ const arr = require("fs")
   .trim()
   .split("\n");
 
-// 2022.06.13(Mon)
 // my way
 // Math.max(arr[i])로 요소 최대 길이를 구하려고 했으나
 // i를 무턱대고 쓸 수 없어서 map 방법 이용
