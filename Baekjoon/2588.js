@@ -1,6 +1,7 @@
 // 2588 곱셈
 // 2022.08.21(Sun)
 
+// input이 띄어쓰기가 아닌 줄바꿈으로 되어있는 경우 split(' ') -> split('\n') 로 코드 변경해줘야 함!
 const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
 
 const a = parseInt(input[0]);
