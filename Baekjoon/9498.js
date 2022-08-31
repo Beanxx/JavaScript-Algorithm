@@ -1,7 +1,7 @@
 // 9498 시험 성적
 // 2022.08.31(Wed)
 
-const input = require("fs").readFileSync("input.txt").toString().split(" ");
+const input = require("fs").readFileSync("/dev/stdin").toString().split(" ");
 
 const score = parseInt(input[0]);
 
