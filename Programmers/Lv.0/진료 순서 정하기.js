@@ -1,5 +1,6 @@
 // 2022.10.15(Sat)
 
+// my way
 function solution(emergency) {
   let result = [];
 
@@ -37,6 +38,14 @@ function solution(emergency) {
 
   return result;
 }
+
+// other way
+function solution(emergency) {
+  let sorted = emergency.slice().sort((a, b) => b - a);
+  return emergency.map((v) => sorted.indexOf(v) + 1);
+}
+
+// 난 생각보다 푸는데 좀 걸렸고, 코드가 되게 길어졌는데 2줄 안에 구현할 수가 있다니.. wow
 
 console.log(soluction([3, 76, 24])); // [3, 1, 2]
 console.log(soluction([1, 2, 3, 4, 5, 6, 7])); // [7, 6, 5, 4, 3, 2, 1]
