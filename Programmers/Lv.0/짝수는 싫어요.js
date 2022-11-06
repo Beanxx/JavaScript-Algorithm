@@ -1,8 +1,9 @@
+// 복습완료💫(221106)
 // 2022.10.10(Mon)
 
 function solution(n) {
   let answer = [];
-  for (let i = 1; i < n + 1; i += 2) {
+  for (let i = 1; i <= n; i += 2) {
     answer.push(i);
   }
   return answer;

@@ -1,3 +1,4 @@
+// 복습완료💫(221106)
 // 2022.10.22(Sat)
 
 // my way
@@ -15,3 +16,5 @@ function solution(my_string, num1, num2) {
 
   return my_string.join("");
 }
+
+console.log(solution("hello", 1, 2)); // 'hlelo'

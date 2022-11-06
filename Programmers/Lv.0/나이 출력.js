@@ -1,4 +1,4 @@
+// 복습완료💫(221106)
 function solution(age) {
-  let answer = 2022 - age + 1;
-  return answer;
+  return 2022 - age + 1;
 }

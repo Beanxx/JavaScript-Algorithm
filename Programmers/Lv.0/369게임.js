@@ -1,3 +1,4 @@
+// 복습완료💫(221106)
 // 2022.10.21(Fri)
 
 // my way
@@ -17,3 +18,6 @@ function solution(order) {
 function solution(order) {
   return (String(order).match(/[369]/g) || []).length;
 }
+console.log(String(order).match(/[369]/g)); // ['9', '3']
+
+console.log(solution(29423)); // 2

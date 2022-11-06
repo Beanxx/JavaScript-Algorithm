@@ -1,3 +1,4 @@
+// 복습완료💫(221106)
 // 2022.10.30(Sun)
 
 function solution(before, after) {

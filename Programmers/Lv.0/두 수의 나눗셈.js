@@ -1,4 +1,4 @@
+// 복습완료💫(221106)
 function solution(num1, num2) {
-  let answer = parseInt((num1 / num2) * 1000);
-  return answer;
+  return parseInt((num1 / num2) * 1000);
 }
