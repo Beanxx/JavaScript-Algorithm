@@ -1,10 +1,12 @@
+// 복습완료💫(221108)
 // 2022.10.16(Sun)
 
+// 서로 다른 n개 중 m개를 뽑는 경우의 수: n!/(n-m)! x m! 공식 활용해서 풀기
 function solution(balls, share) {
   let answer = 0;
-  let top = BigInt(1);
-  let bottom1 = BigInt(1);
-  let bottom2 = BigInt(1);
+  let top = BigInt(1); // 분모
+  let bottom1 = BigInt(1); // 분자1
+  let bottom2 = BigInt(1); // 분자2
 
   for (let i = 1; i <= balls; i++) {
     top *= BigInt(i);
