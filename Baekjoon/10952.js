@@ -1,4 +1,4 @@
-// 10951 A+B - 5
+// 10952 A+B - 5
 // 2022.11.14(Mon)
 
 const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");

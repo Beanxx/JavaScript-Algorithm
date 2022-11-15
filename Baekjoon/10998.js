@@ -1,4 +1,4 @@
-// 1001 AxB
+// 10998 AxB
 // 2022.08.13(Sat)
 
 const input = require("fs").readFileSync("/dev/stdin").toString().split(" ");
