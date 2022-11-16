@@ -1,3 +1,4 @@
+// 복습완료💫(221116)
 // 2022.10.22(Sat)
 
 function solution(numbers) {
@@ -16,8 +17,9 @@ function solution(numbers) {
 
   for (let i = 0; i < arr.length; i++) {
     numbers = numbers.split(arr[i]).join(i);
+    // numbers.split(arr[1]): ['', 'fourzerosixseven']
+    // numbers.split(arr[1]).join(1): '1fourzerosixseven'
   }
-
   return Number(numbers);
 }
 
@@ -45,3 +47,6 @@ function solution(numbers) {
 
   return Number(num);
 }
+// zero, one, two ... 숫자에 해당하는 영어문자가 나올 경우에 이를 replace를 통해 obj 객체의 value로 바꿔주기
+
+console.log(solution("onefourzerosixseven")); // 14067

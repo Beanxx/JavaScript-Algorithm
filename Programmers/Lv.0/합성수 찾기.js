@@ -1,3 +1,6 @@
+// 복습완료💫(221116)
+
+// 합성수: 약수의 개수가 3개 이상인 수
 function solution(n) {
   let result = 0;
 
@@ -5,17 +8,14 @@ function solution(n) {
   const isPrime = (num) => {
     for (let i = 2; i <= Math.sqrt(num); i++) {
       // num이 뭐라도 나눠지는게 있으면 소수가 아닌 합성수!
-      if (num % i === 0) {
-        return true;
-      }
+      if (num % i === 0) return true;
     }
     return false;
   };
 
   for (let i = 1; i <= n; i++) {
-    if (isPrime(i) === true) {
-      result++;
-    }
+    // 합성수라면 result + 1
+    if (isPrime(i) === true) result++;
   }
 
   return result;
@@ -26,16 +26,17 @@ function solution(n) {
   let answer = new Set();
 
   for (let i = 1; i <= n; i++) {
+    // 1, i 자신은 제외한 그 사이의 수로 i를 나눔으로써 나누어 떨어진다면 합성수!
     for (let j = 2; j < i; j++) {
-      if (i % j === 0) {
-        answer.add(i);
-      }
+      if (i % j === 0) answer.add(i);
     }
   }
 
-  return answer.size;
+  return answer.size; //answer 집합 원소의 개수 반환
 }
 
 // set() 객체: 중복을 제거한 값들의 집합
 // .add(): 특정 요소 추가
 // .size: 요소 개수 반환
+
+console.log(solution(10)); // 5

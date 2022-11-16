@@ -1,3 +1,4 @@
+// 복습완료💫(221116)
 // 2022.10.26(Wed)
 
 function solution(keyinput, board) {
@@ -5,12 +6,18 @@ function solution(keyinput, board) {
 
   for (let el of keyinput) {
     if (el === "up") {
+      // [0, 1]
+      // Math.floor(board[1] / 2) => 한 쪽으로 이동할 수 있는 칸 수
+      // 한 쪽으로 이동할 수 있는 최대 칸의 위치와 한칸 전진한 값을 비교하여 더 작은 수를 배열에 넣기
       answer[1] = Math.min(Math.floor(board[1] / 2), answer[1] + 1);
     } else if (el === "down") {
+      // [0, -1]
       answer[1] = Math.max(-Math.floor(board[1] / 2), answer[1] - 1);
     } else if (el === "right") {
+      // [1, 0]
       answer[0] = Math.min(Math.floor(board[0] / 2), answer[0] + 1);
     } else if (el === "left") {
+      // [-1, 0]
       answer[0] = Math.max(-Math.floor(board[0] / 2), answer[0] - 1);
     }
   }

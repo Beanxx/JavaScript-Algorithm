@@ -1,10 +1,12 @@
+// 복습완료💫(221116)
 // 2022.10.26(Wed)
 
 function solution(numbers) {
-  numbers = numbers.sort((a, b) => a - b);
+  // sort() 메소드 사용시 굳이 변수에 할당 안해줘도 원본 배열이 정렬된 배열로 바뀌어 있음!
+  numbers.sort((a, b) => a - b); // 오름차순 정렬 -> [ -5, -3, 1, 2, 4 ]
   let answer = Math.max(
-    numbers[numbers.length - 1] * numbers[numbers.length - 2],
-    numbers[0] * numbers[1]
+    numbers[0] * numbers[1],
+    numbers[numbers.length - 1] * numbers[numbers.length - 2]
   );
   return answer;
 }
