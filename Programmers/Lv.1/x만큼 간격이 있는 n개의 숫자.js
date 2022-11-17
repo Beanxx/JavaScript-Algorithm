@@ -1,19 +1,6 @@
+// 복습완료💫(221117)
 // 2022.07.04(Mon)
 // x만큼 간격이 있는 n개의 숫자.js
-
-// first try (X)
-function solution(x, n) {
-  let result = [];
-  for (let i = x; i <= x + n; i += x) {
-    result.push(i);
-  }
-  return result;
-}
-
-// for문 조건식에 말도 안 되는 식을 써서 그런건지 아래와 같은 test error가 났다.. OTL
-// signal: aborted (core dumped) <- 원인모를 에러 두둥등장
-
-// -----------------------------------------------
 
 function solution(x, n) {
   let result = [];
@@ -35,7 +22,11 @@ function solution(x, n) {
 function solution(x, n) {
   return Array(n)
     .fill(x)
-    .map((el, idx) => el * (idx + 1)); // x부터 시작하는 el 값에 +1씩 증가하는 index를 곱해준 값을 배열의 원소로!
+    .map((el, idx) => el * (idx + 1));
+  // x부터 시작하는 el 값에 +1씩 증가하는 index를 곱해준 값을 배열의 원소로!
+  // Array(n).fill(x): [ 2, 2, 2, 2, 2 ]
 }
 
 // Array(n).fill(x): n개의 길이만큼의 배열을 x로 시작하는 값으로 채움.
+
+console.log(solution(2, 5)); // [2, 4, 6, 8, 10]

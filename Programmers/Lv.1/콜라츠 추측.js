@@ -1,3 +1,4 @@
+// 복습완료💫(221117)
 // 2022.07.11(Mon)
 // 콜라츠 추측.js
 
@@ -6,17 +7,11 @@ function solution(num) {
   // 작업 500번 반복할 때까지 순회
   for (let count = 0; count <= 500; count++) {
     // num이 1이 되면 작업 끝-
-    if (num === 1) {
-      return count;
-    } else {
-      // num이 아직 1이 되지 않았으면
-      // 짝수면
-      if (num % 2 === 0) {
-        num = num / 2;
-      } else {
-        // 홀수면
-        num = num * 3 + 1;
-      }
+    if (num === 1) return count;
+    // num이 아직 1이 되지 않았으면
+    else {
+      if (num % 2 === 0) num /= 2; // 짝수
+      else num = num * 3 + 1; // 홀수
     }
   }
   return -1;
@@ -39,3 +34,5 @@ function solution(num) {
   // num이 1이면 작업횟수 count return | num이 1이 아닌데 while 반복문을 탈출했다는 것은 작업 횟수가 500번을 넘었다는 뜻이므로 -1 return
   return num === 1 ? count : -1;
 }
+
+console.log(solution(16)); // 4

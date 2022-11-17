@@ -1,3 +1,4 @@
+// 복습완료💫(221117)
 // 2022.06.13(Mon)
 // 수박수박수박수박수.js
 
@@ -5,11 +6,8 @@
 function solution(n) {
   let answer = "";
   for (let i = 1; i <= n; i++) {
-    if (i % 2 === 1) {
-      answer += "수";
-    } else {
-      answer += "박";
-    }
+    if (i % 2 === 1) answer += "수"; // 홀수자리에선 '수'
+    else answer += "박"; // 짝수자리에선 '박'
   }
   return answer;
 }
@@ -17,6 +15,7 @@ function solution(n) {
 // another way
 function solution(n) {
   return "수박".repeat(n).substring(0, n);
+  // "수박".repeat(3) = '수박수박수박'
 }
 
 // * repeat(count) *
@@ -29,3 +28,5 @@ function solution(n) {
 
 // 난 거의 10줄에 푼 문제를 단 한 줄로 풀 수가 있다니...
 // js method를 잘 활용해서 풀어보자!
+
+console.log(solution(3)); // '수박수'

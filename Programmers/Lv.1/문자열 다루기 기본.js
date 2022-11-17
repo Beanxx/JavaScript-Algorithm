@@ -1,20 +1,17 @@
+// 복습완료💫(221117)
 // 2022.06.29(Wed)
 // 문자열 다루기 기본.js
 
 // my way
 function solution(s) {
-  // 문자열 s 길이가 4 혹은 6이 아닐 경우 무조건 false return
-  if (s.length !== 4 && s.length !== 6) {
-    return false;
-  }
+  // 문자열 s 길이가 4와 6 모두 아닐 경우 무조건 false return
+  if (s.length !== 4 && s.length !== 6) return false;
 
   for (let i = 0; i < s.length; i++) {
-    if (isNaN(Number(s[i])) === true) {
-      // 숫자가 아니라면
-      return false;
-    }
+    // 숫자가 아니라면
+    if (isNaN(Number(s[i]))) return false;
   }
-  return true;
+  return true; // 위의 조건들을 모두 만족하지 않으면 true return
 }
 
 // isNaN() -> true: 숫자 아님, false: 숫자임
@@ -26,7 +23,7 @@ function solution(s) {
 
 // other way 1 (정규 표현식 사용)
 function solution(s) {
-  const regex = /^\d{6}$|^\d{4}$/;
+  const regex = /^\d{4}$|^\d{6}$/;
   return regex.test(s);
 }
 
