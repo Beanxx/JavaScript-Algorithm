@@ -1,3 +1,4 @@
+// 복습완료💫(221118)
 // 2022.06.17(Fri)
 // 직사각형 별찍기.js
 
@@ -5,13 +6,15 @@
 process.stdin.setEncoding("utf8");
 process.stdin.on("data", (data) => {
   const n = data.split(" ");
-  const a = Number(n[0]),
-    b = Number(n[1]);
+  const a = Number(n[0]);
+  const b = Number(n[1]);
 
+  // => here!!
   let result = "";
-  // 줄 수
+
+  // b = 줄 수(세로 길이)
   for (let i = 0; i < b; i++) {
-    // 한 줄 안에 들어가는 * 반복
+    // 한 줄 안에 들어가는 * 반복 (a = 가로 길이)
     for (let j = 0; j < a; j++) {
       result += "*";
     }
@@ -35,3 +38,8 @@ process.stdin.on("data", (data) => {
 
 // 원래 주어진 code가 너무 생소한 형식으로 이게 뭐지 싶었는데 그냥 안에다가 코드 작성하면 됐다.
 // 간단할 줄 알았는데 나에겐 생각보다 좀 생각을 해야 했던 문제였다,,
+
+console.log(solution("5 3"));
+// *****
+// *****
+// *****

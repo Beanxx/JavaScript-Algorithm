@@ -1,7 +1,9 @@
+// 복습완료💫(221118)
 // 2022.07.12(Tues)
 // 행렬의 덧셈.js
 
 // my way
+// 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과
 function solution(arr1, arr2) {
   let result = [];
 
@@ -24,6 +26,8 @@ function solution(arr1, arr2) {
 // other way
 function solution(arr1, arr2) {
   return arr1.map((a, i) => a.map((b, j) => b + arr2[i][j]));
+  // arr1.map((a, i) => a) = [[1,2],[2,3]]
+  // b는 각각 [1, 2], [2, 3]
 }
 
 // example case - arr1: [[1,2],[2,3]], arr2: [[3,4],[5,6]]
@@ -40,3 +44,5 @@ function solution(arr1, arr2) {
 // b + arr2[i][j]: 즉, 앞서 언급한 b에 같은 index 위치에 있는 arr2의 요소들을 각각 더한다.
 
 // 화살표 함수를 2번 사용해서 한 줄에 구현 가능하다니 놀랍균,,
+
+console.log(solution([[1], [2]], [[3], [4]])); // [[4], [6]]
