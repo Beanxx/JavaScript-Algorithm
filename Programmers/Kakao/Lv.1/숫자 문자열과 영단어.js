@@ -1,3 +1,4 @@
+// 복습완료💫(221119)
 // 2022.09.23(Fri)
 // 2021 카카오 채용연계형 인턴십
 // Lv.1_숫자 문자열과 영단어.js
@@ -17,25 +18,20 @@ function solution(s) {
     "nine",
   ];
 
-  // 문자열 -> 숫자로 변환할 때 사용하는 변수
-  let str = "";
+  let str = ""; // 문자열 -> 숫자로 변환할 때 사용하는 변수
   let result = "";
 
   for (let el of s) {
-    // 숫자가 아닐 때
+    // 숫자가 아닌 경우
     if (isNaN(el)) {
-      str += el; // str = oneseveneight
+      str += el; // str = one
       if (data.includes(str)) {
-        // console.log(str); // str = one
-        // console.log(data.indexOf(str)) // 1
-        str = data.indexOf(str); // str = 1
-        result += str; // result = 1
+        result += data.indexOf(str); // 1
         str = ""; // 새로운 문자열에 대해서 판단해야하므로 result에 str 값을 넣어주고나서 초기화해주기
       }
-    } else {
-      // 숫자일 때
-      result += el;
     }
+    // 숫자일 때
+    else result += el;
   }
   return Number(result);
 }

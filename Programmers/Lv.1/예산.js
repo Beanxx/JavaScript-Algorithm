@@ -1,3 +1,4 @@
+// 복습완료💫(221119)
 // 2022.10.01(Sat)
 // Summer/Winter Coding(~2018)_Lv.1
 // 예산.js
@@ -9,11 +10,9 @@ function solution(d, budget) {
   // [1, 3, 2, 5, 4] -> [1, 2, 3, 4, 5]
   d.sort((a, b) => a - b);
 
-  for (let i = 0; i < d.length; i++) {
-    budget -= d[i];
-    if (budget >= 0) {
-      result += 1;
-    }
+  for (let el of d) {
+    budget -= el;
+    if (budget >= 0) result++;
   }
   return result;
 }
@@ -34,7 +33,7 @@ function solution(d, budget) {
     }, 0);
 }
 
-// 아직도 reduce를 활용해서 문제를 풀어볼 생각도 안 하구 reduce로 문제 풀기 어렵다,,
+// 아직도 reduce를 활용해서 문제를 풀어볼 생각도 못 하겠고, reduce로 문제 풀기 어렵다,,
 
 console.log(solution([1, 3, 2, 5, 4], 9)); // 3
 console.log(solution([2, 2, 3, 3], 10)); // 4

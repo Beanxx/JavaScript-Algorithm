@@ -1,22 +1,21 @@
+// 복습완료💫(221119)
 // 2022.07.08(Fri)
 // 이상한 문제 만들기.js
 
 // my way (이중 for문)
+// 각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로
 function solution(s) {
-  // "try hello world"
-  let newS = s.split(" "); // ['try', 'hello', 'world']
   let result = "";
+  let newS = s.split(" "); // ['try', 'hello', 'world']
+
   for (let el of newS) {
     // 각 단어들 크게 순회 -> el: 'try', 'hello', 'world'
     for (let i = 0; i < el.length; i++) {
       // 각각의 단어들의 문자들 순회 -> 't', 'r', 'y' ...
-      if (i % 2 === 0) {
-        // 짝수번째 알파벳은 대문자로
-        result += el[i].toUpperCase();
-      } else {
-        // 홀수번째 알파벳은 소문자로
-        result += el[i].toLowerCase();
-      }
+      // 짝수번째 알파벳은 대문자로
+      if (i % 2 === 0) result += el[i].toUpperCase();
+      // 홀수번째 알파벳은 소문자로
+      else result += el[i].toLowerCase();
     }
     result += " "; // 각 단어들의 순회가 끝날 때 마다 다시 공백 처리
   }
@@ -56,3 +55,5 @@ function solution(s) {
 }
 
 // 난 어김없이 for문과 if문을 이용해서 처리했는데 정규표현식과 이중 map 표현도 쓸 수 있구나 했던 신박한 방법쓰,,
+
+console.log(solution("try hello world")); // "TrY HeLlO WoRlD"

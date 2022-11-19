@@ -1,3 +1,4 @@
+// 복습완료💫(221119)
 // 2022.09.23(Fri)
 // 2022 KAKAO TECH INTERNSHIP
 // Lv.1_성격 유형 검사하기.js
@@ -7,38 +8,24 @@ function solution(survey, choices) {
   let result = "";
 
   for (let i = 0; i < choices.length; i++) {
-    // 4(+0) 기준으로 왼쪽
-    if (choices[i] < 4) {
+    // 4(모르겠음; +0) 기준으로 왼쪽
+    if (choices[i] < 4)
       data[survey[i][0]] = data[survey[i][0]] + (4 - choices[i]);
-    } else {
-      // 4(+0) 기준으로 오른쪽
-      data[survey[i][1]] = data[survey[i][1]] + (choices[i] - 4);
-    }
+    // 4(+0) 기준으로 오른쪽
+    else data[survey[i][1]] = data[survey[i][1]] + (choices[i] - 4);
   }
 
-  if (data["R"] >= data["T"]) {
-    result += "R";
-  } else {
-    result += "T";
-  }
+  if (data["R"] >= data["T"]) result += "R";
+  else result += "T";
 
-  if (data["C"] >= data["F"]) {
-    result += "C";
-  } else {
-    result += "F";
-  }
+  if (data["C"] >= data["F"]) result += "C";
+  else result += "F";
 
-  if (data["J"] >= data["M"]) {
-    result += "J";
-  } else {
-    result += "M";
-  }
+  if (data["J"] >= data["M"]) result += "J";
+  else result += "M";
 
-  if (data["A"] >= data["N"]) {
-    result += "A";
-  } else {
-    result += "N";
-  }
+  if (data["A"] >= data["N"]) result += "A";
+  else result += "N";
 
   return result;
 }

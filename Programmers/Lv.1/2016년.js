@@ -1,9 +1,11 @@
+// 복습완료💫(221119)
 // 2022.06.24(Fri)
 // 2016년.js
 
 function solution(a, b) {
   const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-  const date = new Date(`2016, ${a}, ${b}`);
+  const date = new Date(`2016, ${a}, ${b}`); // 2016-05-23T15:00:00.000Z
+  // date.getDay() = 2
   return days[date.getDay()];
 }
 
@@ -17,7 +19,8 @@ function solution(a, b) {
 // other way
 // Date() 메서드 사용하지 않고 푸는 방법
 function solution(a, b) {
-  const days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
+  // 2016.01.01 => 금욜이므로 금욜부터 시작
+  const days = ["FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"];
   const months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   // 1/1일에서  -> a/b일까지 며칠 차이인지 저장
@@ -28,11 +31,11 @@ function solution(a, b) {
     count += months[i];
   }
 
-  // b일을 더해주고 1/0일이 아닌 1/1일부터 시작하므로 -1
-  count += b;
+  // 날짜는 0일이 아닌 1일부터 시작이므로 -1
+  count += b - 1;
 
+  // 요일은 7개이므로 % 7
   return days[count % 7];
 }
 
-// Date() 메서드를 활용하지 않는 방법도 이해하려고 했는데 로직은 어느정도 이해가는데
-// 왜 'THU'부터 시작하는지, 왜 a-1를 해주는지 확실하게 완전 이해하진 못했다..
+// 왜 i < a 가 아닌 i < a-1 인지 확실히 이해가 가진 않는다,,
