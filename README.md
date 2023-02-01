@@ -1,4 +1,3 @@
 # JavaScript-Algorithm
-Practice CodingTest in JS
 
-✍️ 매일 한 문제 이상 JS Algorithm 문제를 풀어 기록합니다.
+✍️ 꾸준히 JavaScript로 Algorithm 및 Coding Test 연습 문제를 풀어 기록합니다 :>
