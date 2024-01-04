@@ -1,4 +1,4 @@
-// 2024.01.03(Wed)
+// 2024.01.04(Thurs)
 
 // my way
 function solution(num_list) {
@@ -10,6 +10,5 @@ function solution(num_list) {
 
 // sum ** 2 = Math.pow(sum, 2)
 
-// other way
 console.log(solution([3, 4, 5, 2, 1])); // 1
 console.log(solution([5, 7, 8, 3])); // 0
