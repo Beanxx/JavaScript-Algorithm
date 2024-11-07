@@ -1,4 +1,4 @@
-// 2024.11.06(Thurs)
+// 2024.11.06(Wed)
 
 // my way
 function solution(l, r) {
