@@ -10,8 +10,12 @@ function solution(n) {
   return answer;
 }
 
-// other way
+// 241119
+function solution(n) {
+  return [...String(n)].reduce((acc, cur) => acc + Number(cur), 0);
+}
 
+// other way
 function solution(n) {
   return String(n)
     .split("")

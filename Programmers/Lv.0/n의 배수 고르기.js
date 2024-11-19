@@ -12,7 +12,7 @@ function solution(n, numlist) {
   return answer;
 }
 
-// other way
+// 241119
 function solution(n, numlist) {
   return numlist.filter((el) => el % n === 0);
 }
