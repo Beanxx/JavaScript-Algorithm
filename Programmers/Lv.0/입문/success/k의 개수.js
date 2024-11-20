@@ -18,9 +18,21 @@ function solution(i, j, k) {
   return arr.filter((el) => +el === +k).length;
 }
 
+// 241120
+function solution(i, j, k) {
+  let result = [];
+
+  for (let n = i; n <= j; n++) {
+    result.push(...String(n).split(""));
+  }
+
+  return result.filter((el) => Number(el) === k).length;
+}
+
 // other way
 function solution(i, j, k) {
   let a = "";
+
   for (i; i <= j; i++) {
     a += i;
   }

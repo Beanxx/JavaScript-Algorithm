@@ -11,6 +11,17 @@ function solution(my_string) {
   return answer;
 }
 
+// 241120
+function solution(my_string) {
+  let result = [];
+
+  for (let el of my_string) {
+    if (!result.includes(el)) result.push(el);
+  }
+
+  return result.join("");
+}
+
 // other way
 function solution(my_string) {
   return [...new Set(my_string)].join("");

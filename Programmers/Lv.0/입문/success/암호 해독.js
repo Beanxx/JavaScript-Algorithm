@@ -13,12 +13,9 @@ function solution(cipher, code) {
   return answer;
 }
 
-// other way
+// 241120
 function solution(cipher, code) {
-  return cipher
-    .split("")
-    .filter((el, i) => (i + 1) % code === 0)
-    .join("");
+  return [...cipher].filter((_, idx) => (idx + 1) % code === 0).join("");
 }
 
 // filter((el, i) => ~) 에서 2번째 인자 i는 index를 의미!

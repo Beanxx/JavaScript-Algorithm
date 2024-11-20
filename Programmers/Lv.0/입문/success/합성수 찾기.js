@@ -21,6 +21,24 @@ function solution(n) {
   return result;
 }
 
+// 241120
+function solution(n) {
+  let result = 0;
+
+  for (let i = 4; i <= n; i++) {
+    // 각 숫자별 합성수인지 판별
+    for (let j = 2; j < i; j++) {
+      // 1과 자신을 제외한 나머지 수로 나누어 떨어진다면 약수가 3개 이상이므로 합성수!
+      if (i % j === 0) {
+        result++;
+        break;
+      }
+    }
+  }
+
+  return result;
+}
+
 // other way
 function solution(n) {
   let answer = new Set();

@@ -16,6 +16,18 @@ function solution(n) {
   return answer;
 }
 
+// 241120
+function solution(n) {
+  let result = 1;
+
+  // 나누어 떨어지지 않는다면 피자 수 +1 증가시키기
+  while ((6 * result) % n !== 0) {
+    result++;
+  }
+
+  return result;
+}
+
 // other way
 function solution(n) {
   let pizza = 1;

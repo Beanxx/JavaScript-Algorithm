@@ -45,14 +45,14 @@ function solution(emergency) {
   return result;
 }
 
-// other way
-function solution(emergency) {
-  let sorted = [...emergency].sort((a, b) => b - a); // [ 76, 24, 3 ]
-  return emergency.map((el) => sorted.indexOf(el) + 1);
-  // emergency의 원소에 해당하는 값을 정렬한 배열인 sorted에서 index 찾기
-}
-
 // 난 생각보다 푸는데 좀 걸렸고, 코드가 되게 길어졌는데 2줄 안에 구현할 수가 있다니.. wow
+
+// 241120
+function solution(emergency) {
+  let sortedArr = [...emergency].sort((a, b) => b - a);
+
+  return emergency.map((el) => sortedArr.indexOf(el) + 1);
+}
 
 console.log(solution([3, 76, 24])); // [3, 1, 2]
 console.log(solution([1, 2, 3, 4, 5, 6, 7])); // [7, 6, 5, 4, 3, 2, 1]

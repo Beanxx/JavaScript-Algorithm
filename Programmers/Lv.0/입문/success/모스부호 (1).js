@@ -47,6 +47,15 @@ function solution(letter) {
   return result;
 }
 
+// 241120
+function solution(letter) {
+  // const morse = [...]
+  return letter
+    .split(" ")
+    .map((el) => morse[el])
+    .join("");
+}
+
 // other way
 return letter.split(" ").reduce((prev, cur) => prev + morse[cur], "");
 // morse[cur]을 통해 letter 원소에 해당하는 값을 key로 넣어서 이에 해당하는 value를 reduce를 통해 더해주면 한 줄에 끄읏-
