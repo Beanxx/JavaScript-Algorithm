@@ -11,8 +11,23 @@ function solution(s) {
     else answer.push(Number(el));
   }
 
-  answer = answer.reduce((acc, cur) => acc + cur, 0);
-  return answer;
+  return answer.reduce((acc, cur) => acc + cur, 0);
+}
+
+// 241121
+function solution(s) {
+  let result = 0;
+  let arr = s.split(" ");
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "Z") {
+      result -= Number(arr[i - 1]);
+    } else {
+      result += Number(arr[i]);
+    }
+  }
+
+  return result;
 }
 
 console.log(solution("1 2 Z 3")); // 4

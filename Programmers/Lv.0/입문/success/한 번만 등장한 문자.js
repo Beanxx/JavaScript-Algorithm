@@ -22,6 +22,22 @@ function solution(s) {
   return [...result].sort().join(""); // 배열로 쪼갠 후 사전순으로 정렬하고, 다시 문자열로 합치기
 }
 
+// 241121
+function solution(s) {
+  let result = {};
+
+  for (let el of s) {
+    if (!result[el]) result[el] = 1;
+    else result[el]++;
+  }
+
+  return Object.entries(result)
+    .filter((el) => el[1] === 1)
+    .map((el) => el[0])
+    .sort()
+    .join("");
+}
+
 // other way
 function solution(s) {
   let result = [];

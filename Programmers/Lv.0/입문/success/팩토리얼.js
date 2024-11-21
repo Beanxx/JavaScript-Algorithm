@@ -21,12 +21,29 @@ function solution(n) {
   return result;
 }
 
+// 241121
+function solution(n) {
+  let total = 1;
+  let result = 0;
+
+  while (total <= n) {
+    ++result;
+    total *= result;
+  }
+
+  return result - 1;
+}
+
+// 조건을 만족하고 반복문을 한번 더 돌고 난 후 종료되는거라 기대값에서 +1된 값이 나왔다. 좋은 방법은 아닌듯..
+
 // other way
 function solution(n) {
   let facto = 1;
   let i = 1;
   // 팩토리얼 값이 n을 넘지 않을 때 동안 계속해서 i를 곱해줌
-  while (facto * i < n) facto *= ++i;
+  while (facto * i < n) {
+    facto *= ++i;
+  }
   return i;
 }
 

@@ -10,5 +10,9 @@ function solution(before, after) {
 
   return answer;
 }
-
 // 같은 배열인지 비교연산자로 비교할 수는 없으므로 join('')을 통해 다시 문자열로 만들어준 후 비교하기!
+
+// 241121
+function solution(before, after) {
+  return [...before].sort().join("") === [...after].sort().join("") ? 1 : 0;
+}
