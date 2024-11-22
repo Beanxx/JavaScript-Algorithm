@@ -17,11 +17,25 @@ function solution(my_string) {
   return answer;
 }
 
-// other way
+// other way 1
 function solution(my_string) {
   return eval(my_string);
 }
 
 // eval(): 문자로 표현된 코드를 실행하는 함수 (너무 간편한 함수지만 사용 지양!!!)
+
+// other way 2
+function solution(my_string) {
+  const stack = [];
+  let sign = 1;
+
+  for (const ch of my_string.split(" ")) {
+    if (ch === "+") sign = 1;
+    else if (ch === "-") sign = -1;
+    else stack.push(ch * sign);
+  }
+
+  return stack.reduce((a, b) => a + b, 0);
+}
 
 console.log(solution("8 + 2 - 3")); // 7

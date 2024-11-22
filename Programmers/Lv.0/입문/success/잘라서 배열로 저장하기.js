@@ -12,6 +12,18 @@ function solution(my_str, n) {
   return result;
 }
 
+// 241122
+function solution(my_str, n) {
+  let result = [];
+  let arr = [...my_str];
+
+  for (let i = 0; i < my_str.length; i += n) {
+    result.push(arr.splice(0, n).join(""));
+  }
+
+  return result;
+}
+
 // other way
 function solution(my_str, n) {
   let answer = [];
