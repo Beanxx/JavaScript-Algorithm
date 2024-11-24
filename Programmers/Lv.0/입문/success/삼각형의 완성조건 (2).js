@@ -23,6 +23,23 @@ function solution(sides) {
   return answer.length;
 }
 
+// 241124
+function solution(sides) {
+  const [a, b] = sides.sort((a, b) => b - a);
+  let c = 1;
+  let result = 0;
+
+  // c가 제일 긴 경우 & a가 제일 긴 경우 2가지를 고려해서 풀어야 한다
+  while (c < a + b || b + c < a) {
+    if ((c < a + b && c >= a) || (a < c + b && c <= a)) {
+      result++;
+    }
+    c++;
+  }
+
+  return result;
+}
+
 // other way
 function solution(sides) {
   return Math.min(...sides) * 2 - 1;

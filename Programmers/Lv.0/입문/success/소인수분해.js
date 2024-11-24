@@ -24,7 +24,28 @@ function solution(n) {
   return answer;
 }
 
-// other way
+// 241124
+function solution(n) {
+  let num = n;
+  let sosu = 2;
+  let result = [];
+
+  while (num !== 1) {
+    if (num % sosu === 0) {
+      num /= sosu;
+
+      if (!result.includes(sosu)) {
+        result.push(sosu);
+      }
+    } else {
+      sosu++;
+    }
+  }
+
+  return result;
+}
+
+// other way 1
 function solution(n) {
   let answer = [];
 
@@ -36,6 +57,23 @@ function solution(n) {
     }
   }
   return [...new Set(answer)]; // 중복 원소 제거
+}
+
+// other way 2
+function solution(n) {
+  let answer = [];
+  let i = 2;
+
+  while (i <= n) {
+    if (n % i === 0) {
+      answer.push(i);
+      n /= i;
+    } else {
+      i++;
+    }
+  }
+
+  return [...new Set(answer)];
 }
 
 console.log(solution(420)); // [2, 3, 5, 7]

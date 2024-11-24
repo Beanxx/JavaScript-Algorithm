@@ -1,3 +1,4 @@
+// 241124 다시 풀어야 하는 이유: for문 조건을 수정해나가면서 테스트케이스에 맞춰서 어부지리로 통과한 느낌이라 다시 풀어볼 필요 있음
 // 복습완료💫(221108)
 // 2022.10.17(Mon)
 
@@ -17,4 +18,20 @@ function solution(numbers, k) {
   return answer;
 }
 
+// 241124
+function solution(numbers, k) {
+  let result = 1; // 첫번째는 무조건 배월 원소의 첫번째 값인 1이 차지하므로 1 할당
+
+  for (let i = 1; i < k; i++) {
+    result += 2;
+
+    if (result > numbers.length) {
+      result -= numbers.length;
+    }
+  }
+
+  return result;
+}
+
 console.log(solution([1, 2, 3, 4], 2)); // 3
+console.log(solution([1, 2, 3], 5)); // 3 (edge case)

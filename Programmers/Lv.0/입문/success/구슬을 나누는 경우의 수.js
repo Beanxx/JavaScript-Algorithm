@@ -27,3 +27,26 @@ function solution(balls, share) {
 // 실행하면 맞긴 하는데 테스트 몇개가 통과가 안되서 찾아보니까 BigInt를 사용해야 한다구 한다,,
 // BigInt: Number 원시 값이 안정적으로 나타낼 수 있는 최대치인 2^53 - 1보다 큰 정수를 표현할 수 있는 내장 객체
 // 아마도 balls, share의 범위땜에 BigInt를 사용해야 통과가 되는듯..?
+
+// 241124
+function solution(balls, share) {
+  let nFac = 1;
+  let mFac = 1;
+  let nmFac = 1;
+
+  for (let i = 2; i <= balls; i++) nFac *= i;
+  for (let j = 2; j <= share; j++) mFac *= j;
+  for (let k = 2; k <= balls - share; k++) nmFac *= k;
+
+  return Math.round(nFac / (nmFac * mFac));
+}
+
+// other way
+// 재귀함수 활용
+const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
+
+function solution(balls, share) {
+  return Math.round(
+    factorial(balls) / (factorial(balls - share) * factorial(share))
+  );
+}
